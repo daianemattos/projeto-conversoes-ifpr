@@ -7,13 +7,13 @@
             width="900"
           >
             <v-card-title
-              class="primary white--text"
+              class="primary white--text titulo"
             >
               Conversões de Sistemas Numéricos
             </v-card-title>
             <v-card-text class="pa-6">
               <v-row align="center" justify="center" class="pa-2">
-                <v-col cols="6">
+                <v-col cols="12" md="6">
                   <v-select
                     v-model="item"
                     :items="items"
@@ -22,7 +22,7 @@
                     @change="limpar"
                   ></v-select>
                 </v-col>
-                <v-col cols="6">
+                <v-col cols="12" md="6">
                   <v-text-field
                     v-model="valor"
                     label="Valor"
@@ -51,7 +51,7 @@
                 >
                 </v-textarea>
               </v-row>
-              <v-row align="center" justify="center" class="pa-2">
+              <v-row align="center" justify="center" class="pa-2 text-center footer">
                 Trabalho desenvolvido na disciplina de Organização e Arquitetura de Computadores
               </v-row>
             </v-card-text>
@@ -233,3 +233,15 @@ export default {
   }
 }
 </script>
+
+<style>
+  @media(max-width:500px) {
+    .titulo {
+      font-size: 1rem !important;
+    }
+
+    .footer {
+      font-size: 0.85rem !important;
+    }
+  }
+</style>
